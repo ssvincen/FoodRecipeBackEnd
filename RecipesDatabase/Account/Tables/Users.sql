@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[Users]
+(
+	[Id] BIGINT NOT NULL IDENTITY(1,1), 
+	[FirstName] NVARCHAR(150) NOT NULL, 
+	[Surname] NVARCHAR(150) NOT NULL, 
+	[MobileNumber] NVARCHAR(20) NULL, 
+	[EmailAddress] NVARCHAR(200) NOT NULL, 
+	[PasswordHash] NVARCHAR(MAX) NOT NULL, 
+	[DateCreated] DATETIME DEFAULT GETDATE(),
+	[LastLogin] DATETIME,
+	CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED (Id ASC),
+)

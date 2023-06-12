@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[UserRoles]
+(
+	[Id] BIGINT NOT NULL IDENTITY(1,1), 
+	[FK_UserId] BIGINT NOT NULL, 
+	[FK_RoleId] INT NOT NULL, 
+	CONSTRAINT [PK_UserRoles] PRIMARY KEY CLUSTERED (Id ASC),
+	CONSTRAINT [FK_UserId] FOREIGN KEY ([FK_UserId]) REFERENCES [dbo].[Users](Id),
+	CONSTRAINT [FK_UserRoleId] FOREIGN KEY ([FK_RoleId]) REFERENCES [dbo].[Roles](Id)
+)

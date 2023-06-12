@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Ingredient]
+(
+	[Id] BIGINT NOT NULL IDENTITY(1,1), 
+	[Name] NVARCHAR(150) NOT NULL, 
+	CONSTRAINT [PK_Ingredient] PRIMARY KEY CLUSTERED (Id ASC),
+)
