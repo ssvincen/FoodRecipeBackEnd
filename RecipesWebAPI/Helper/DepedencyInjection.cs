@@ -9,6 +9,7 @@ namespace RecipesWebAPI.Helper
         {
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.TryAddSingleton<CurrentUser, CurrentUser>();
+            services.TryAddSingleton<IWebHostEnvironment>(provider => provider.GetRequiredService<IWebHostEnvironment>());
             services.AddTransient<IConnectionManager, ConnectionManager>();
             services.AddScoped<IAccountDataAccess, AccountDataAccess>();
             services.AddScoped<IRecipesDataAccess, RecipesDataAccess>();

@@ -28,7 +28,7 @@ namespace RecipesWebAPI.Controllers
 
         [Authorize(Roles.Admin)]
         [HttpPost("SaveRecipe")]
-        public async Task<IActionResult> SaveRecipeAsync([FromForm] SaveRecipeModel model, [FromForm(Name = "imageFile")] IFormFile file)
+        public async Task<IActionResult> SaveRecipeAsync([FromForm] IFormFile file, SaveRecipeModel model)
         {
             try
             {
