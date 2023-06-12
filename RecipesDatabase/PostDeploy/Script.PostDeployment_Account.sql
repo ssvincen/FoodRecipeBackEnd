@@ -34,9 +34,9 @@ CREATE TABLE #NetUser
 	[LastLogin] DATETIME
 )
 
---"password": "Password@01"
+--"password": "Admin"
 INSERT INTO #NetUser([FirstName], [Surname], [MobileNumber], [EmailAddress], [PasswordHash], [DateCreated], [LastLogin])
-VALUES('Sifiso', 'Sikhakhane', '27719217216', 'ss.vincen@gmail.com', '01mnX/M/emYvn+1uF1+lUl73AHA85dBPxMIWaLYtH/I=', GETDATE(), GETDATE())
+VALUES('Sifiso', 'Sikhakhane', '27719217216', 'ss.vincen@gmail.com', 'wcIksDzZvHtqhtd/XazkAZF2bEhc1V3EjK+ayHMzXW8=', GETDATE(), GETDATE())
 
 --Insert into physical table
 INSERT INTO [dbo].[Users] ( 

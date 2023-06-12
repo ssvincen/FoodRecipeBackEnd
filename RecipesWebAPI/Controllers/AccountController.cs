@@ -32,7 +32,7 @@ namespace RecipesWebAPI.Controllers
             {
                 //{
                 //    "emailAddress": "ss.vincen@gmail.com",
-                //    "password": "Password@01"
+                //    "password": "Admin"
                 //}
                 var signingKey = _configuration["JWT:Secret"];
                 var resp = await _accountData.LoginUserAsync(new LoginUser() { EmailAddress = model.EmailAddress, Password = CryptoHelper.PasswordHash(model.Password) });
